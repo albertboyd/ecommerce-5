@@ -3,7 +3,7 @@
 
   &#xa0;
 
-  <!-- <a href="https://ecommerce5.netlify.app">Demo</a> -->
+  <a href="https://jj-ecommerce-5.vercel.app">Demo</a>
 </div>
 
 <h1 align="center">Ecommerce 5</h1>
