@@ -40,7 +40,7 @@ router.post("/create-user", upload.single("file"), async (req, res, next) => {
 
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `http://localhost:3000/activation/${activationToken}`;
+    const activationUrl = `https://jj-ecommerce-5.vercel.app/activation/${activationToken}`;
 
     try {
       await sendMail({
@@ -162,11 +162,13 @@ router.get(
   "/logout",
   catchAsyncErrors(async (req, res, next) => {
     try {
-      res.cookie("token", null, {
-        expires: new Date(Date.now()),
+      res.cookie("token", "", {
+        expires: new Date(Date.now()),  // set the cookie expiration date to now
         httpOnly: true,
+        sameSite: "none",  // match the sameSite property with the original cookie
+        secure: true,  // match the secure property with the original cookie
       });
-      res.status(201).json({
+      res.status(200).json({
         success: true,
         message: "Log out successful!",
       });
@@ -175,6 +177,7 @@ router.get(
     }
   })
 );
+
 
 // update user info
 router.put(
