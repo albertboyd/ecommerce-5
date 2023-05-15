@@ -22,7 +22,9 @@ const ProductDetailsPage = () => {
       const data = allProducts && allProducts.find((i) => i._id === id);
       setData(data);
     }
-  }, [allProducts, allEvents]);
+    window.scrollTo(0, 0); // scroll to top of page
+  }, [allProducts, allEvents, id]);  // include `id` in the dependencies array
+
 
   return (
     <div>

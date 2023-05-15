@@ -5,6 +5,10 @@ import styles from "../../../styles/styles";
 
 const Categories = () => {
   const navigate = useNavigate();
+  const handleSubmit = (i) => {
+    navigate(`/products?category=${i.title}`);
+    window.scrollTo(0, 0); // scroll to top of page
+  };
   return (
     <>
       <div className={`${styles.section} hidden sm:block`}>
@@ -31,9 +35,6 @@ const Categories = () => {
         <div className="grid grid-cols-1 gap-[5px] md:grid-cols-2 md:gap-[10px] lg:grid-cols-4 lg:gap-[20px] xl:grid-cols-5 xl:gap-[30px]">
           {categoriesData &&
             categoriesData.map((i) => {
-              const handleSubmit = (i) => {
-                navigate(`/products?category=${i.title}`);
-              };
               return (
                 <div
                   className="w-full h-[100px] flex items-center justify-between cursor-pointer overflow-hidden"
