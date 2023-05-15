@@ -44,7 +44,7 @@ router.post("/create-shop", upload.single("file"), async (req, res, next) => {
 
     const activationToken = createActivationToken(seller);
 
-    const activationUrl = `https://jj-ecommerce-5.vercel.app/seller/activation/${activationToken}`;
+    const activationUrl = `http://localhost:3000/seller/activation/${activationToken}`;
 
     try {
       await sendMail({
@@ -171,11 +171,10 @@ router.get(
   "/logout",
   catchAsyncErrors(async (req, res, next) => {
     try {
-      res.cookie("seller_token", null, {
-        expires: new Date(Date.now()),
+      res.clearCookie("seller_token", {
         httpOnly: true,
         sameSite: 'none',
-        secure: true,
+        secure: true
       });
       res.status(201).json({
         success: true,
@@ -186,7 +185,6 @@ router.get(
     }
   })
 );
-
 
 // get shop info
 router.get(
