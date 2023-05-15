@@ -80,4 +80,4 @@ $ yarn start
 ## memo: License
 This project is under license from MIT. For more details, see the LICENSE file.
 
-Made with :heart: by <a href="https://github.com
+Made with :heart: by <a href="https://github.com/jeffjiang13/ecommerce-5" >Jeff  Jiang </a>
