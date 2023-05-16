@@ -172,9 +172,10 @@ router.get(
   catchAsyncErrors(async (req, res, next) => {
     try {
       res.clearCookie("seller_token", "", {
+        expires: new Date(Date.now()), // set the cookie expiration date to now
         httpOnly: true,
-        sameSite: 'none',
-        secure: true
+        sameSite: "none",
+        secure: true,
       });
       res.status(201).json({
         success: true,
