@@ -171,7 +171,7 @@ router.get(
   "/logout",
   catchAsyncErrors(async (req, res, next) => {
     try {
-      res.clearCookie("seller_token", "", {
+      res.clearCookie("seller_token", {
         expires: new Date(Date.now()), // set the cookie expiration date to now
         httpOnly: true,
         sameSite: "none",
