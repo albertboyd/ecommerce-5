@@ -171,7 +171,7 @@ router.get(
   "/logout",
   catchAsyncErrors(async (req, res, next) => {
     try {
-      res.clearCookie("seller_token", {
+      res.clearCookie("seller_token", "", {
         httpOnly: true,
         sameSite: 'none',
         secure: true
