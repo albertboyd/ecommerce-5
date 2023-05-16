@@ -74,7 +74,7 @@ const ProfileContent = ({ active }) => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full mb-10 overflow-y-scroll ">
       {/* profile */}
       {active === 1 && (
         <>
