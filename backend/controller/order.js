@@ -6,7 +6,7 @@ const { isAuthenticated, isSeller, isAdmin } = require("../middleware/auth");
 const Order = require("../model/order");
 const Shop = require("../model/shop");
 const Product = require("../model/product");
-
+const Event = require("../model/event");
 // create new order
 router.post(
   "/create-order",
@@ -100,10 +100,55 @@ router.put(
       if (!order) {
         return next(new ErrorHandler("Order not found with this id", 400));
       }
+
       if (req.body.status === "Transferred to delivery partner") {
         order.cart.forEach(async (o) => {
-          await updateOrder(o._id, o.qty);
+          console.log(o);
+          if (o.isEvent) {
+            const eventUpdated = await updateEvent(o._id, o.qty);
+            if (!eventUpdated) {
+              throw new Error("Event with id " + o._id + " not found");
+            }
+          } else {
+            const productUpdated = await updateItem(o._id, o.qty);
+            if (!productUpdated) {
+              throw new Error("Product with id " + o._id + " not found");
+            }
+          }
         });
+
+        // ...
+
+        async function updateItem(id, qty) {
+          const product = await Product.findById(id);
+
+          if (product) {
+            product.stock -= qty;
+            product.sold_out += qty;
+
+            await product.save({ validateBeforeSave: false });
+            return true; // Return true if the product was updated successfully
+          } else {
+            console.log("Product with id " + id + " not found");
+            return false; // Return false if the product was not found
+          }
+        }
+
+        async function updateEvent(id, qty) {
+          console.log("updateEvent id:", id); // log the item ID
+
+          const event = await Event.findById(id);
+          if (event) {
+            event.stock -= qty;
+            event.sold_out += qty;
+
+            await event.save({ validateBeforeSave: false });
+            return true; // Return true if the event was updated successfully
+          } else {
+            console.log("Event with id " + id + " not found");
+            return false; // Return false if the event was not found
+          }
+        }
       }
 
       order.status = req.body.status;
@@ -111,7 +156,7 @@ router.put(
       if (req.body.status === "Delivered") {
         order.deliveredAt = Date.now();
         order.paymentInfo.status = "Succeeded";
-        const serviceCharge = order.totalPrice * .10;
+        const serviceCharge = order.totalPrice * 0.1;
         await updateSellerInfo(order.totalPrice - serviceCharge);
       }
 
@@ -122,23 +167,47 @@ router.put(
         order,
       });
 
-      async function updateOrder(id, qty) {
+      async function updateItem(id, qty) {
         const product = await Product.findById(id);
 
-        product.stock -= qty;
-        product.sold_out += qty;
+        if (product) {
+          product.stock -= qty;
+          product.sold_out += qty;
 
-        await product.save({ validateBeforeSave: false });
+          await product.save({ validateBeforeSave: false });
+          return true; // Return true if the product was updated successfully
+        } else {
+          console.log("Product with id " + id + " not found");
+          return false; // Return false if the product was not found
+        }
+      }
+
+      async function updateEvent(id, qty) {
+        console.log("updateEvent id:", id); // log the item ID
+
+        const event = await Event.findById(id);
+        if (event) {
+          event.stock -= qty;
+          event.sold_out += qty;
+
+          await event.save({ validateBeforeSave: false });
+          return true; // Return true if the event was updated successfully
+        } else {
+          console.log("Event with id " + id + " not found");
+          return false; // Return false if the event was not found
+        }
       }
 
       async function updateSellerInfo(amount) {
         const seller = await Shop.findById(req.seller.id);
-        
+
         seller.availableBalance = amount;
 
         await seller.save();
       }
     } catch (error) {
+      console.log("Error:", error); // log the error object
+
       return next(new ErrorHandler(error.message, 500));
     }
   })
