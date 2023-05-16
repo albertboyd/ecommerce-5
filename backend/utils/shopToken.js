@@ -7,7 +7,8 @@ const sendShopToken = (user, statusCode, res) => {
     expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
     httpOnly: true,
     sameSite: "none",
-    secure: true,
+    secure: process.env.NODE_ENV === 'PRODUCTION' ? true : false,
+    domain: 'jj-ecommerce-5.vercel.app',
   };
 
   res.status(statusCode).cookie("seller_token", token, options).json({
