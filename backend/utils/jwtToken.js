@@ -8,7 +8,6 @@ const sendToken = (user, statusCode, res) => {
     httpOnly: true,
     sameSite: "none",
     domain: 'jj-ecommerce-5.vercel.app', // Add this line
-    secure: process.env.NODE_ENV === 'PRODUCTION' ? true : false, // Modify this line
   };
 
   res.status(statusCode).cookie("token", token, options).json({
