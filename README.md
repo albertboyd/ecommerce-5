@@ -1,9 +1,10 @@
 <div align="center" id="top">
   <img src="./frontend/public/ishopper.png" alt="Ecommerce 5" />
-
+  <img src="./frontend/public/port2.png" alt="Ecommerce 5" />
   &#xa0;
 
-  <a href="https://jj-ecommerce-5.vercel.app">Demo</a>
+<a href="https://jj-ecommerce-5.vercel.app">Demo</a>
+
 </div>
 
 <h1 align="center">Ecommerce 5</h1>
@@ -30,11 +31,11 @@
 
 <br>
 
-## :dart: About ##
+## :dart: About
 
 Ecommerce 5 is an ecommerce platform built with MERN stack. It provides an intuitive shopping experience, with a wide range of products, seamless checkout process, multi-vendor, admin dashboard and payment integration.
 
-## :sparkles: Features ##
+## :sparkles: Features
 
 :heavy_check_mark: User-friendly interface;\
 :heavy_check_mark: Wide range of products;\
@@ -43,9 +44,7 @@ Ecommerce 5 is an ecommerce platform built with MERN stack. It provides an intui
 :heavy_check_mark: Admin dashboard;\
 :heavy_check_mark: Payment integration;
 
-
-
-## :rocket: Technologies ##
+## :rocket: Technologies
 
 The following tools were used in this project:
 
@@ -55,11 +54,11 @@ The following tools were used in this project:
 - [Node.js](https://nodejs.org/en/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-## :white_check_mark: Requirements ##
+## :white_check_mark: Requirements
 
 Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 
-## :checkered_flag: Starting ##
+## :checkered_flag: Starting
 
 ```bash
 # Clone this project
@@ -78,6 +77,7 @@ $ yarn start
 ```
 
 ## memo: License
+
 This project is under license from MIT. For more details, see the LICENSE file.
 
-Made with :heart: by <a href="https://github.com/jeffjiang13/ecommerce-5" >Jeff  Jiang </a>
+Made with :heart: by <a href="https://github.com/jeffjiang13/ecommerce-5" >Jeff Jiang </a>

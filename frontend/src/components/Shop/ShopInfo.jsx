@@ -46,7 +46,6 @@ const ShopInfo = ({ isOwner }) => {
   const totalRatings = products && products.reduce((acc,product) => acc + product.reviews.reduce((sum,review) => sum + review.rating, 0),0);
 
   const averageRating = totalRatings / totalReviewsLength || 0;
-console.log(data)
   return (
    <>
    {
