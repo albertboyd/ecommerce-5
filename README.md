@@ -1,7 +1,7 @@
 <div align="center" id="top">
   <img src="./frontend/public/ishopper.png" alt="Ecommerce 5" />
-  <img src="./frontend/public/port2.png" alt="Ecommerce 5" />
   &#xa0;
+    <img src="./frontend/public/port2.png" alt="Ecommerce 5" />
 
 <a href="https://jj-ecommerce-5.vercel.app">Demo</a>
 
