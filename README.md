@@ -8,7 +8,7 @@
 
 </div>
 
-<h1 align="center">Ecommerce 5</h1>
+<h1 align="center">iShopper</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/jeffjiang13/ecommerce-5?color=56BEB8">
@@ -34,7 +34,15 @@
 
 ## :dart: About
 
-Ecommerce 5 is an ecommerce platform built with MERN stack. It provides an intuitive shopping experience, with a wide range of products, seamless checkout process, multi-vendor, admin dashboard and payment integration.
+iShopper is a full-featured e-commerce platform developed using the MERN stack. The platform is designed to provide an intuitive and convenient shopping experience, with a vast selection of products available for purchase.
+
+One of iShopper's key features is the smooth checkout process, enabling customers to make purchases with ease. The platform supports multiple vendors, making it a versatile solution for businesses of various sizes. The integrated admin dashboard provides comprehensive management capabilities, from product inventory control to sales tracking and customer engagement.
+
+In addition, iShopper boasts a reliable payment integration system, ensuring secure and hassle-free transactions. This feature reinforces user trust and enhances overall customer satisfaction.
+
+The primary aim of iShopper is to bridge the gap between businesses and customers by offering an efficient, secure, and user-friendly online shopping platform. Whether you're a small business venturing into e-commerce or a large enterprise looking for a robust online sales platform, iShopper is designed to cater to your needs.
+
+In essence, iShopper stands as a testament to the potential of contemporary web technologies in creating dynamic and efficient e-commerce solutions.
 
 ## :sparkles: Features
 
