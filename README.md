@@ -4,20 +4,20 @@
   <br />
   <img src="./frontend/public/port2.png" alt="Ecommerce 5" />
 
-<a href="https://jj-ecommerce-5.vercel.app">Demo</a>
+<a href="https://albert-ecommerce-5.vercel.app">Demo</a>
 
 </div>
 
 <h1 align="center">iShopper</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/jeffjiang13/ecommerce-5?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/albertboyd/ecommerce-5?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/jeffjiang13/ecommerce-5?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/albertboyd/ecommerce-5?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jeffjiang13/ecommerce-5?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/albertboyd/ecommerce-5?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/jeffjiang13/ecommerce-5?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/albertboyd/ecommerce-5?color=56BEB8">
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/jeffjiang13" target="_blank">Author</a>
+  <a href="https://github.com/albertboyd" target="_blank">Author</a>
 </p>
 
 <br>
@@ -71,7 +71,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/jeffjiang13/ecommerce-5
+$ git clone https://github.com/albertboyd/ecommerce-5
 
 # Access
 $ cd ecommerce-5
@@ -89,4 +89,4 @@ $ yarn start
 
 This project is under license from MIT. For more details, see the LICENSE file.
 
-Made with :heart: by <a href="https://github.com/jeffjiang13/ecommerce-5" >Jeff Jiang </a>
+Made with :heart: by <a href="https://github.com/albertboyd/ecommerce-5" >Albert Boyd </a>

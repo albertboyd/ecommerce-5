@@ -11,7 +11,7 @@
     "start": "node server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false"
   },
-  "author": "Jeff Jiang",
+  "author": "Albert Boyd",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
